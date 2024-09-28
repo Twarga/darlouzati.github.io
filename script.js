@@ -1,12 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
+    // Sidebar functionality
+    $('#sidebar-toggle').click(function() {
+        $('.ui.sidebar').sidebar('toggle');
+    });
+
     // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
+
+    // Form validation
+    $('.ui.form').form({
+        fields: {
+            name: 'empty',
+            email: 'email',
+            message: 'empty'
+        }
+    });
+
+    // Initialize embed
+    $('.ui.embed').embed();
+
+    // Product order functionality
+    $('.ui.card .button').on('click', function() {
+        var productName = $(this).closest('.card').find('.header').text();
+        alert('Commande passée pour ' + productName + '. Nous vous contacterons bientôt pour confirmer votre commande.');
+    });
+
+    // Download menu functionality
+    $('#download-menu').on('click', function() {
+        alert('Le menu sera téléchargé bientôt.');
     });
 
     // Mobile menu toggle
@@ -31,21 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
     langToggle.addEventListener('click', () => {
         // Implement language switch logic here
         console.log('Language toggled');
-    });
-});
-    // Form validation
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // Implement form validation logic here
-        console.log('Form submitted');
-    });
-
-    // Download menu (placeholder function)
-    const downloadMenu = document.getElementById('download-menu');
-    downloadMenu.addEventListener('click', () => {
-        // Implement menu download logic here
-        console.log('Menu downloaded');
     });
 
     // Lazy loading images (placeholder function)
@@ -93,14 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const walk = (x - startX) * 2;
         productSlider.scrollLeft = scrollLeft - walk;
     });
+});
 
-    // Order button functionality
-    const orderButtons = document.querySelectorAll('.order-btn');
-    orderButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const productName = button.parentElement.querySelector('h3').textContent;
-            alert(`Commande passée pour ${productName}. Nous vous contacterons bientôt pour confirmer votre commande.`);
-        });
+document.addEventListener('DOMContentLoaded', () => {
+    const floaterToggle = document.getElementById('floater-toggle');
+    const floaterMenu = document.getElementById('floater-menu');
+
+    floaterToggle.addEventListener('click', () => {
+        floaterMenu.classList.toggle('active');
+        floaterToggle.querySelector('i').classList.toggle('fa-plus');
+        floaterToggle.querySelector('i').classList.toggle('fa-minus');
     });
-
-    // Add more JavaScript functionality as needed
+});
