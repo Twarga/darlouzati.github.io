@@ -1,0 +1,463 @@
+:root {
+    --beige: #F5E6D3;
+    --cream: #FCF5E5;
+    --brown: #8C7A5B;
+    --dark-brown: #4A3F35;
+    --gold: #D4AF37;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-brown);
+    background-color: var(--beige);
+}
+
+h1, h2, h3 {
+    font-family: 'Amiri', serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(245, 230, 211, 0.9);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-family: 'Amiri', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-brown);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-brown);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+main {
+    padding-top: 80px;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    background: linear-gradient(135deg, var(--beige) 0%, var(--cream) 100%);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--dark-brown);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--brown);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta {
+    background-color: var(--gold);
+    color: var(--dark-brown);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: var(--dark-brown);
+    color: var(--gold);
+}
+
+.contact-btn {
+    background-color: var(--cream);
+    color: var(--dark-brown);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.contact-btn:hover {
+    background-color: var(--dark-brown);
+    color: var(--cream);
+}
+
+@media screen and (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+#products {
+    background-color: #E6D8C3;
+}
+
+.product-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    flex: 0 0 300px;
+    margin-right: 2rem;
+    background-color: var(--cream);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    margin-bottom: 1rem;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.order-btn {
+    background-color: var(--brown);
+    color: var(--cream);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.order-btn:hover {
+    background-color: var(--dark-brown);
+}
+
+#download-menu {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: var(--gold);
+    color: var(--dark-brown);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+#download-menu:hover {
+    background-color: var(--dark-brown);
+    color: var(--gold);
+#location {
+    background-color: var(--cream);
+    text-align: center;
+}
+
+#location h2 {
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+#contact {
+    background-color: var(--brown);
+    color: var(--cream);
+    padding: 4rem 2rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+}
+
+#contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background-color: var(--cream);
+    color: var(--brown);
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: var(--dark-brown);
+    color: var(--cream);
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+    color: var(--gold);
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    color: var(--cream);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--gold);
+}
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    #contact-form {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+footer {
+    background-color: var(--dark-brown);
+    color: var(--cream);
+    text-align: center;
+    padding: 2rem;
+}
+
+footer a {
+    color: var(--cream);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    #main-nav {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        flex-basis: 80%;
+    }
+
+    .hamburger {
+        display: block;
+        flex-basis: 20%;
+    }
+
+    .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-card {
+        flex: 0 0 250px;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--dark-brown);
+}
+
+.phone-number i {
+    margin-right: 0.5rem;
+    color: var(--gold);
+}

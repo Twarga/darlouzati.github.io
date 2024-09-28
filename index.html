@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarLouzati - Boulangerie Traditionnelle Marocaine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="logo">DarLouzati</div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#location">Emplacement</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="hero-content">
+                <h1>DarLouzati</h1>
+                <h2>خبز و حلويات</h2>
+                <button class="cta">Découvrez Nos Produits</button>
+
+            </div>
+            <div class="hero-image">
+                <img src="darlouzati-shop.jpg" alt="DarLouzati Bakery">
+            </div>
+        </section>
+        <section id="products">
+            <h2>Nos Produits</h2>
+            <div class="product-slider">
+                <div class="product-card">
+                    <img src="bread1.jpg" alt="Pain Traditionnel">
+                    <h3>Pain Traditionnel</h3>
+                    <p>Un délicieux pain marocain fait maison</p>
+                    <span class="price">10 MAD</span>
+                    <button class="order-btn">Commander</button>
+                </div>
+                <div class="product-card">
+                    <img src="pastry1.jpg" alt="Cornes de Gazelle">
+                    <h3>Cornes de Gazelle</h3>
+                    <p>Pâtisserie traditionnelle aux amandes</p>
+                    <span class="price">5 MAD / pièce</span>
+                    <button class="order-btn">Commander</button>
+                </div>
+                <div class="product-card">
+                    <img src="bread2.jpg" alt="Pain aux Olives">
+                    <h3>Pain aux Olives</h3>
+                    <p>Pain savoureux garni d'olives marocaines</p>
+                    <span class="price">15 MAD</span>
+                    <button class="order-btn">Commander</button>
+                </div>
+            </div>
+            <button id="download-menu">Télécharger le Menu</button>
+        </section>
+
+        <section id="location">
+            <h2>Notre Emplacement</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.5762734492!2d-9.237699684906332!3d32.29340198112361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac212049843597%3A0x6b618c47dfd85d40!2sDar%20Louzati!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p>En face de Hamame Fadila- مقابل حمام فضيلة :العنوان</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Nom" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Nos Coordonnées</h3>
+                    <p><i class="fas fa-phone"></i> Téléphone: 0606-462382</p>
+                    <p><i class="fas fa-envelope"></i> Email: hello@reallygreatsite.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Adresse: En face de Hamame Fadila</p>
+                    <p><i class="fas fa-clock"></i> Heures d'ouverture: Lun-Sam 7h-19h</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/DarLouzati" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/DarLouzati" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/DarLouzati" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/212606462382" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>    </main>
+
+    <footer>
+        <p>© 2023 DarLouzati. Tous droits réservés.</p>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+    </footer>
+</body>
+</html>
